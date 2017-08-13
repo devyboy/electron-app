@@ -1,0 +1,16 @@
+{
+  "name": "sysinfoapp",
+  "version": "1.0.0",
+  "description": "test electron app",
+  "main": "./scripts/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Devon Pirestani",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.6.11",
+    "jquery": "^3.2.1",
+    "open": "0.0.5"
+  }
+}
