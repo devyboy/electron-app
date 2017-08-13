@@ -33,7 +33,7 @@ function createWindow() {
 
 // Opens dev tools
 
-    win.webContents.openDevTools();
+    //win.webContents.openDevTools();
 
 // Removes the default menu
 
