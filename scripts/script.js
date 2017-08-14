@@ -8,6 +8,7 @@ const {
 } = require("electron");
 var win = remote.getCurrentWindow();
 var open = require("open");
+var applied = false;
 
 
 $(document).ready(function () {
@@ -77,14 +78,63 @@ $(document).ready(function () {
         win.reload();
     });
 
-    $("#settings").click(function () {
-        //
-    });
-
     $("#github").click(function () {
         open("https://github.com/devyboy")
     });
 
+    $(".dropbtn").mouseover(function () {
+        $("#buttonhover").css("background-color", "#444444");
+    });
 
+    $(".dropbtn").mouseleave(function () {
+        $("#buttonhover").css("background-color", "transparent");
+    });
+    
+    $(".dropdown-content").mouseover(function () {
+        $("#buttonhover").css("background-color", "#444444");
+    });
 
+    $(".dropdown-content").mouseleave(function () {
+        $("#buttonhover").css("background-color", "transparent");
+    });
+
+    $(".dropdown").mouseover(function () {
+        $("#buttonhover").css("background-color", "#3a3a3a");
+    });
+
+    $(".dropdown").mouseleave(function () {
+        $("#buttonhover").css("background-color", "transparent");
+    });
+    
+    $("#settings").click(function () {
+        $(".modal").css("display", "block");
+    });
+
+    $(window).click(function (e) {
+        if (e.target.id == "myModal") {
+            $("#myModal").css("display", "none");
+        }
+    });
+
+    $("#changeTheme").click(function () {
+        applied = !applied;
+    });
+
+    $(".btn-success").click(function () {
+        if (applied == true) {
+            $("#myModal").css("display", "none");
+            $("#bootstrap").attr("href", "https://bootswatch.com/darkly/bootstrap.min.css");
+            $(".page-header").css("color", "white");
+            $(".list-group").css("color", "white");
+            $(".modal-content").css("background-color", "white");
+            $(".modal-content").css("background-color", "#222222");
+        }
+        else {
+            $("#myModal").css("display", "none");
+            $("#bootstrap").attr("href", "https://bootswatch.com/yeti/bootstrap.min.css");
+            $(".page-header").css("color", "black");
+            $(".list-group").css("color", "black");
+            $(".modal-content").css("background-color", "white");
+        }
+    });
 });

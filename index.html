@@ -5,7 +5,7 @@
     <title id="title">SysInfoApp</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet">
+    <link id="bootstrap" href="https://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 
@@ -33,6 +33,7 @@
                 SysInfoApp
             </div>
             <div class="dropdown">
+                <div id="buttonhover"></div>
                 <img class="dropbtn" src="./img/menu.png"/>
                 <div class="dropdown-content">
                     <a id="refresh" href="#">Refresh</a>
@@ -43,6 +44,21 @@
     </div>
 
     <!-- Content -->
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h4 class="page-header">Settings</h4>
+            Enable dark mode?
+
+            <!-- Rounded switch -->
+
+            <label class="switch">
+                <input id="changeTheme" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <button type="button" class="btn btn-sm btn-success">Apply</button>
+        </div>
+    </div>
 
     <div class="container">
         <h3 class="page-header">Version Data</h3>

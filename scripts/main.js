@@ -8,8 +8,8 @@ let win;
 
 function createWindow() {
     win = new BrowserWindow({
-        width: 650,
-        height: 450,
+        width: 588,
+        height: 390,
         backgroundColor: '0FFF',
         icon: path.join(__dirname, "../img/icon.ico"),
         show: false,
@@ -33,7 +33,7 @@ function createWindow() {
 
 // Opens dev tools
 
-    //win.webContents.openDevTools();
+    win.webContents.openDevTools();
 
 // Removes the default menu
 
