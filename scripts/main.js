@@ -14,6 +14,7 @@ function createWindow() {
         icon: path.join(__dirname, "../img/icon.ico"),
         show: false,
         frame: false,
+        resizable: false,
     });
 
 // Load the HTML file
@@ -33,7 +34,7 @@ function createWindow() {
 
 // Opens dev tools
 
-    win.webContents.openDevTools();
+    //win.webContents.openDevTools();
 
 // Removes the default menu
 
