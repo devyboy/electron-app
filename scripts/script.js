@@ -8,9 +8,11 @@ const {
 } = require("electron");
 var win = remote.getCurrentWindow();
 var open = require("open");
+
 var applied = false;
 
-function menuBarFunction() {
+//Menubar functionality
+function menuBarFunctions() {
 
     $("#refresh").click(function () {
         win.reload();
@@ -53,7 +55,10 @@ function menuBarFunction() {
             $("#myModal").css("display", "none");
         }
     });
+}
 
+//Changing theme 
+function changeTheme() {
     $("#changeTheme").click(function () {
         applied = !applied;
     });
@@ -141,5 +146,7 @@ $(document).ready(function () {
         <li class="list-group-item"><strong>System Architecture:</strong> ${process.arch}</li>
     `
 
-    menuBarFunction();
+    menuBarFunctions();
+
+    changeTheme();
 });

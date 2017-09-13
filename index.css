@@ -114,10 +114,14 @@ ul {
 .list-group {
     color: black;
     font-family: "Open Sans";
-    width: inherit;
+    width: auto;
     font-size: .85em;
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+.list-group-item {
+    word-wrap: break-word;
 }
 
 .container {
