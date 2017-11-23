@@ -66,7 +66,7 @@ function changeTheme() {
     $(".btn-success").click(function () {
         if (applied == true) {
             $("#myModal").css("display", "none");
-            $("#bootstrap").attr("href", "https://bootswatch.com/darkly/bootstrap.min.css");
+            $("#bootstrap").attr("href", "bootstrap-dark.min.css");
             $(".page-header").css("color", "white");
             $(".list-group").css("color", "white");
             $(".modal-content").css("background-color", "white");
@@ -74,7 +74,7 @@ function changeTheme() {
         }
         else {
             $("#myModal").css("display", "none");
-            $("#bootstrap").attr("href", "https://bootswatch.com/yeti/bootstrap.min.css");
+            $("#bootstrap").attr("href", "bootstrap-light.min.css");
             $(".page-header").css("color", "black");
             $(".list-group").css("color", "black");
             $(".modal-content").css("background-color", "white");
