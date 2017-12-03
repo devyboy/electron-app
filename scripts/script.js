@@ -85,6 +85,10 @@ function changeTheme() {
 
 $(document).ready(function () {
 
+    $.get("http://ipinfo.io", function (response) {
+		alert('Your location is: ' + response.city + ', ' + response.region);
+}, "jsonp");
+
     //Taskbar functionality
 
     $("#minimize").click(function () {

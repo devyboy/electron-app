@@ -1,3 +1,4 @@
+const request = require('request');
 const {app, BrowserWindow} = require("electron");
 const path = require("path");
 const url = require("url");
@@ -55,4 +56,8 @@ app.on("window-all-closed", () => {
     if(process.platform !== "darwin"){
         app.quit();
     }
+});
+
+request.get({url: "http://ipinfo.io/json", json: true}, function (error, response, body) {
+    console.log(response.body.city + " " + response.body.region);
 });
