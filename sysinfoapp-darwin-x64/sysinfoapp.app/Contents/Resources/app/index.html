@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title id="title">SysInfoApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="bootstrap" href="bootstrap-light.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+
+<body>
+
+    <!-- Taskbar -->
+
+    <div class="bar-container">
+        <nav>
+            <div id="buttons">
+                <div title="Minimize" id="minimize">
+                    <span>-</span>
+                </div>
+                <div title="Maximize/Restore" id="maximize">
+                    <span>+</span>
+                </div>
+                <div title="Close" id="close">
+                    <span>&times;</span>
+                </div>
+            </div>
+            <div id="titleShown">
+                SysInfoApp
+            </div>
+            <div class="dropdown">
+                <div id="buttonhover"></div>
+                <img class="dropbtn" src="./img/menu.png"/>
+                <div class="dropdown-content">
+                    <a id="refresh" href="#">Refresh</a>
+                    <a id="settings" href="#">Settings</a>
+                    <a title="Go to my GitHub account" id="github" href="#">&#8689;GitHub</span></a>
+                </div>
+            </div>
+    </div>
+
+    <!-- Content -->
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h4 class="page-header">Settings</h4>
+            Enable dark mode?
+
+            <!-- Rounded switch -->
+
+            <label class="switch">
+                <input id="changeTheme" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <br>
+            <button type="button" class="btn btn-sm btn-success">Apply</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="page-header">Version Data</h3>
+        <ul class="list-group">
+            <div id="versions"></div>
+        </ul>
+        <h3 class="page-header">Directories</h3>
+        <ul class="list-group">
+            <div id="directories"></div>
+        </ul>
+        <h3 class="page-header">Memory (MB)</h3>
+        <ul class="list-group">
+            <div id="memory"></div>
+        </ul>
+        <h3 class="page-header">Misc.</h3>
+        <ul class="list-group">
+            <div id="misc"></div>
+        </ul>
+    </div>
+</body>
+
+<!-- Scripts -->
+
+<script src="./scripts/script.js"></script>
+
+</html>
