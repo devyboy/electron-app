@@ -29,7 +29,7 @@ function menuBarFunctions() {
     $(".dropbtn").mouseleave(function () {
         $("#buttonhover").css("background-color", "transparent");
     });
-    
+
     $(".dropdown-content").mouseover(function () {
         $("#buttonhover").css("background-color", "#444444");
     });
@@ -45,7 +45,7 @@ function menuBarFunctions() {
     $(".dropdown").mouseleave(function () {
         $("#buttonhover").css("background-color", "transparent");
     });
-    
+
     $("#settings").click(function () {
         $(".modal").css("display", "block");
     });
@@ -57,7 +57,7 @@ function menuBarFunctions() {
     });
 }
 
-//Changing theme 
+//Changing theme
 function changeTheme() {
     $("#changeTheme").click(function () {
         applied = !applied;
@@ -84,10 +84,6 @@ function changeTheme() {
 
 
 $(document).ready(function () {
-
-    $.get("http://ipinfo.io", function (response) {
-		alert('Your location is: ' + response.city + ', ' + response.region);
-}, "jsonp");
 
     //Taskbar functionality
 
@@ -148,6 +144,7 @@ $(document).ready(function () {
         <li class="list-group-item"><strong>Debug Mode:</strong> ${process.features.debug}</li>
         <li class="list-group-item"><strong>Platform:</strong> ${process.platform}</li>
         <li class="list-group-item"><strong>System Architecture:</strong> ${process.arch}</li>
+
     `
 
     menuBarFunctions();

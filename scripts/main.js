@@ -34,13 +34,13 @@ function createWindow() {
 
 // Opens dev tools
 
-    //win.webContents.openDevTools();
+    win.webContents.openDevTools();
 
 // Removes the default menu
 
     win.setMenu(null);
 
-// Sets window to null when closed    
+// Sets window to null when closed
 
     win.on("closed", () => {
         win = null;
@@ -50,14 +50,10 @@ function createWindow() {
 
 app.on("ready", createWindow);
 
-// Keep app open in background on OSX 
+// Keep app open in background on OSX
 
 app.on("window-all-closed", () => {
     if(process.platform !== "darwin"){
         app.quit();
     }
-});
-
-request.get({url: "http://ipinfo.io/json", json: true}, function (error, response, body) {
-    console.log(response.body.city + " " + response.body.region);
 });
