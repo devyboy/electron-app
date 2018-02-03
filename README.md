@@ -8,3 +8,5 @@ A desktop app built with Electron that displays various information about the us
 2. Start the application
 
    `npm start`
+## Developer Tools
+If you want to use the Chrome developer tools with this app, edit the `/scripts/main.js` file and uncomment the line `//win.webContents.openDevTools();`. This should open the dev tools when the application opens. To undo this just recomment it.  
