@@ -1,5 +1,9 @@
 # electron-app
-A desktop app built with Electron that displays various information about the user's system
+A simple cross-platform desktop app built with Electron that displays various information about the user's system.
+
+![screenshot](https://i.imgur.com/xKqjftA.png)
+
+![screenshot](https://i.imgur.com/iFGn6yl.png)
 
 ## Installation
 1. Clone the repository and install the node modules
